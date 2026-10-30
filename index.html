@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Модуль 3. Мощный лид-магнит · Конспект</title>
+<meta name="description" content="Конспект модуля 3 практикума «Антихрупкая система продаж»: как лид-магнит создаёт желание купить, три принципа, шесть типов и конструктор лид-магнита.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B0E0D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('dm-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<style>
+  :root {
+    --bg: #F4F5F0;
+    --surface: #FFFFFF;
+    --surface-2: #ECEDE6;
+    --ink: #0B0E0D;
+    --ink-2: #2A302D;
+    --muted: #5D645F;
+    --line: #DCDED5;
+    --lime: #C8F135;
+    --lime-soft: rgba(200, 241, 53, .38);
+    --mark: rgba(200, 241, 53, .55);
+    --link: #0B0E0D;
+    --shadow: 0 1px 2px rgba(11,14,13,.04), 0 8px 24px rgba(11,14,13,.06);
+    --c-blue: #3B82F6;
+    --c-red: #EF4444;
+    --c-orange: #F59E0B;
+    --c-yellow: #EAB308;
+    --c-purple: #8B5CF6;
+    --c-green: #22C55E;
+    --c-gray: #8A918C;
+    --tint: 9%;
+    --radius: 18px;
+    --dark-card: #0B0E0D;
+    --dark-card-line: #0B0E0D;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0B0E0D;
+      --surface: #131816;
+      --surface-2: #1A201D;
+      --ink: #F4F5F0;
+      --ink-2: #D9DCD3;
+      --muted: #9AA29C;
+      --line: #262D29;
+      --lime-soft: rgba(200, 241, 53, .16);
+      --mark: rgba(200, 241, 53, .22);
+      --link: #C8F135;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+      --tint: 13%;
+      --dark-card: #1A201D;
+      --dark-card-line: rgba(200,241,53,.35);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0B0E0D;
+    --surface: #131816;
+    --surface-2: #1A201D;
+    --ink: #F4F5F0;
+    --ink-2: #D9DCD3;
+    --muted: #9AA29C;
+    --line: #262D29;
+    --lime-soft: rgba(200, 241, 53, .16);
+    --mark: rgba(200, 241, 53, .22);
+    --link: #C8F135;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    --tint: 13%;
+    --dark-card: #1A201D;
+    --dark-card-line: rgba(200,241,53,.35);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    transition: background .25s ease, color .25s ease;
+  }
+  img { max-width: 100%; display: block; }
+  b, strong { font-weight: 700; color: var(--ink); }
+  a { color: var(--link); text-decoration-color: var(--lime); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  :focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; border-radius: 6px; }
+
+  /* ---------- top bar ---------- */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar__in {
+    max-width: 1240px; margin: 0 auto; padding: 10px 16px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; min-width: 0; text-decoration: none; color: var(--ink); }
+  .brand__dot { width: 30px; height: 30px; border-radius: 9px; background: var(--lime); color: #0B0E0D; display: grid; place-items: center; font-weight: 900; font-size: 15px; flex: none; }
+  .brand__txt { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
+  .brand__name { font-weight: 800; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .brand__sub { font-size: 11.5px; color: var(--muted); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .theme-btn {
+    flex: none; display: inline-flex; align-items: center; gap: 8px;
+    height: 38px; padding: 0 14px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+    font: 700 13px "Montserrat", sans-serif; cursor: pointer;
+  }
+  .theme-btn:hover { border-color: var(--ink); }
+  .theme-btn svg { width: 17px; height: 17px; }
+  .theme-btn .i-sun { display: none; }
+  :root[data-theme="dark"] .theme-btn .i-sun { display: block; }
+  :root[data-theme="dark"] .theme-btn .i-moon { display: none; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-btn .i-sun { display: block; }
+    :root:not([data-theme="light"]) .theme-btn .i-moon { display: none; }
+  }
+  .progress { position: absolute; left: 0; bottom: -1px; height: 3px; width: 0; background: var(--lime); transition: width .1s linear; }
+
+  /* ---------- layout ---------- */
+  .layout { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: grid; grid-template-columns: 1fr; }
+  main { min-width: 0; max-width: 780px; width: 100%; margin: 0 auto; padding-bottom: 80px; }
+  .side { display: none; }
+  @media (min-width: 1100px) {
+    .layout { grid-template-columns: 270px minmax(0, 1fr); gap: 56px; }
+    main { margin: 0; }
+    .side { display: block; }
+    .side__in { position: sticky; top: 76px; padding: 28px 0 40px; max-height: calc(100vh - 76px); overflow: auto; }
+  }
+  .side__label { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px 12px; }
+  .side nav a {
+    display: block; padding: 8px 12px; border-radius: 10px; text-decoration: none;
+    color: var(--muted); font-size: 13.5px; font-weight: 600; line-height: 1.35;
+    border-left: 3px solid transparent;
+  }
+  .side nav a:hover { color: var(--ink); background: var(--surface); }
+  .side nav a.is-active { color: var(--ink); background: var(--surface); border-left-color: var(--lime); }
+  .side nav a .n { display: block; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+
+  /* ---------- hero ---------- */
+  .hero { padding: 36px 0 8px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+  .chip--lime { background: var(--lime); color: #0B0E0D; }
+  .chip--ghost { border: 1px solid var(--line); color: var(--muted); background: var(--surface); }
+  h1 {
+    font-size: clamp(32px, 7.4vw, 54px); line-height: 1.04; letter-spacing: -.025em;
+    font-weight: 900; margin: 0 0 18px;
+  }
+  h1 .hl { background: linear-gradient(transparent 58%, var(--lime-soft) 58%, var(--lime-soft) 92%, transparent 92%); padding: 0 .06em; }
+  .lead { font-size: 17.5px; line-height: 1.6; color: var(--ink-2); margin: 0 0 22px; }
+  .result-card {
+    background: var(--dark-card); color: #F4F5F0; border: 1px solid var(--dark-card-line); border-radius: var(--radius); padding: 20px 22px;
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .result-card b { color: var(--lime); }
+  .result-card__ico { flex: none; width: 40px; height: 40px; border-radius: 12px; background: var(--lime); display: grid; place-items: center; font-size: 20px; }
+  .result-card p { margin: 0; font-size: 15.5px; line-height: 1.55; }
+
+  /* ---------- sections ---------- */
+  section { scroll-margin-top: 76px; }
+  .sec { padding-top: 44px; }
+  .sec + .sec { border-top: 1px solid var(--line); margin-top: 44px; }
+  .lesson-label { font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .lesson-label .num { background: var(--lime); color: #0B0E0D; border-radius: 8px; padding: 3px 9px; letter-spacing: .02em; }
+  h2.sec-title { font-size: clamp(25px, 5vw, 34px); line-height: 1.15; letter-spacing: -.02em; font-weight: 900; margin: 0 0 8px; }
+  h3 { font-size: 20px; line-height: 1.3; font-weight: 800; letter-spacing: -.01em; margin: 34px 0 12px; scroll-margin-top: 84px; }
+  p { margin: 0 0 14px; }
+  ul, ol { margin: 0 0 16px; padding-left: 0; list-style: none; }
+  ul > li, ol > li { position: relative; padding-left: 26px; margin-bottom: 9px; }
+  ul > li::before { content: ""; position: absolute; left: 6px; top: .66em; width: 7px; height: 7px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 2px color-mix(in srgb, var(--ink) 12%, transparent); }
+  ol { counter-reset: n; }
+  ol > li { counter-increment: n; padding-left: 38px; }
+  ol > li::before { content: counter(n); position: absolute; left: 0; top: 1px; width: 26px; height: 26px; border-radius: 8px; background: var(--ink); color: var(--bg); font-size: 13px; font-weight: 800; display: grid; place-items: center; line-height: 1; }
+  .example { font-weight: 700; color: var(--muted); margin: 18px 0 10px; }
+
+  /* ---------- TOC block in content ---------- */
+  .toc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+  .toc h2 { margin: 0 0 14px; font-size: 22px; font-weight: 900; letter-spacing: -.01em; }
+  .toc ol { margin: 0; }
+  .toc ol > li { margin-bottom: 6px; padding-left: 0; }
+  .toc ol > li::before { display: none; }
+  .toc a {
+    display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 12px;
+    text-decoration: none; color: var(--ink); font-weight: 600; font-size: 15px; line-height: 1.35;
+    background: var(--surface-2); transition: transform .15s ease, background .15s ease;
+  }
+  .toc a:hover { background: var(--lime-soft); transform: translateX(3px); }
+  .toc a .k { flex: none; min-width: 34px; height: 30px; padding: 0 6px; border-radius: 9px; background: var(--ink); color: var(--bg); display: grid; place-items: center; font-size: 12.5px; font-weight: 800; }
+  .toc a .arr { margin-left: auto; color: var(--muted); font-weight: 800; }
+
+  /* ---------- callouts ---------- */
+  .co {
+    --c: var(--c-gray);
+    position: relative; display: flex; gap: 14px; align-items: flex-start;
+    padding: 18px 20px; margin: 18px 0; border-radius: 16px;
+    background: color-mix(in srgb, var(--c) var(--tint), var(--surface));
+    border: 1px solid color-mix(in srgb, var(--c) 28%, var(--line));
+  }
+  .co__ico { flex: none; font-size: 22px; line-height: 1.3; }
+  .co__body { min-width: 0; }
+  .co__body > :last-child { margin-bottom: 0; }
+  .co__body p { margin-bottom: 10px; }
+  .co__body ul > li { margin-bottom: 6px; }
+  .co--blue { --c: var(--c-blue); }
+  .co--red { --c: var(--c-red); }
+  .co--orange { --c: var(--c-orange); }
+  .co--yellow { --c: var(--c-yellow); }
+  .co--purple { --c: var(--c-purple); }
+  .co--green { --c: var(--c-green); }
+  .co--lead { font-size: 17px; }
+  .co--lead .co__body p:first-child { font-size: 17.5px; line-height: 1.5; }
+
+  .summary {
+    margin: 30px 0 0; border-radius: var(--radius); padding: 22px 22px 18px;
+    background: var(--dark-card); color: #F4F5F0; border: 1px solid var(--dark-card-line);
+  }
+  .summary__h { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 18px; margin-bottom: 14px; color: #F4F5F0; }
+  .summary__h .tick { width: 28px; height: 28px; border-radius: 8px; background: var(--lime); color: #0B0E0D; display: grid; place-items: center; font-size: 15px; }
+  .summary ul { margin: 0; }
+  .summary li { color: rgba(244,245,240,.88); }
+  .summary b { color: var(--lime); }
+  .summary ul > li::before { background: var(--lime); box-shadow: none; }
+
+  /* ---------- columns ---------- */
+  .cols { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 18px 0; }
+  .cols .co { margin: 0; flex-direction: column; gap: 6px; }
+  @media (min-width: 640px) { .cols { grid-template-columns: 1fr 1fr; } }
+
+  /* ---------- tables ---------- */
+  .table-wrap { margin: 18px 0; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 16px; border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14.5px; line-height: 1.5; }
+  th, td { text-align: left; vertical-align: top; padding: 13px 16px; border-bottom: 1px solid var(--line); }
+  tr:last-child td { border-bottom: 0; }
+  th { background: var(--surface-2); font-weight: 800; font-size: 12.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); white-space: nowrap; }
+  td:first-child { font-weight: 600; }
+  tr.r-yellow td { background: color-mix(in srgb, var(--c-yellow) var(--tint), var(--surface)); }
+  tr.r-orange td { background: color-mix(in srgb, var(--c-orange) calc(var(--tint) + 3%), var(--surface)); }
+  tr.r-red td { background: color-mix(in srgb, var(--c-red) calc(var(--tint) + 3%), var(--surface)); }
+  tr.r-green td { background: color-mix(in srgb, var(--c-green) var(--tint), var(--surface)); }
+  tr.r-total td { background: var(--lime-soft); font-weight: 800; }
+  .table-hint { display: none; font-size: 12.5px; color: var(--muted); margin: -8px 0 16px; }
+  @media (max-width: 620px) { .table-hint { display: block; } }
+  .t-compact table { min-width: 0; }
+
+  /* ---------- figures ---------- */
+  figure.scheme { margin: 20px 0; }
+  .scheme__frame {
+    display: block; width: 100%; padding: 10px; border-radius: 16px; cursor: zoom-in;
+    background: #FFFFFF; border: 1px solid var(--line); box-shadow: var(--shadow);
+    position: relative;
+  }
+  .scheme__frame img { width: 100%; height: auto; border-radius: 8px; }
+  .scheme__zoom {
+    position: absolute; right: 12px; bottom: 12px; height: 30px; padding: 0 10px; border-radius: 999px;
+    background: #0B0E0D; color: #F4F5F0; font: 700 12px "Montserrat", sans-serif;
+    display: inline-flex; align-items: center; gap: 6px; opacity: .88;
+  }
+  @media (max-width: 520px) {
+    .scheme__frame { padding: 6px; }
+    .scheme__zoom { right: 6px; bottom: 6px; height: 26px; width: 26px; padding: 0; justify-content: center; font-size: 0; gap: 0; }
+    .scheme__zoom::before { content: "⤢"; font-size: 14px; }
+  }
+  figure.scheme figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; text-align: center; }
+
+  /* ---------- tabs ---------- */
+  .tabs { margin: 20px 0; }
+  .tabs__list { display: flex; gap: 6px; padding: 5px; border-radius: 14px; background: var(--surface-2); overflow-x: auto; scrollbar-width: none; }
+  .tabs__list::-webkit-scrollbar { display: none; }
+  .tab {
+    flex: 1 0 auto; border: 0; cursor: pointer; padding: 10px 14px; border-radius: 10px;
+    font: 700 14px "Montserrat", sans-serif; color: var(--muted); background: transparent; white-space: nowrap;
+  }
+  .tab[aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+  .tab .tn { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 7px; margin-right: 6px; background: var(--line); color: var(--ink); font-size: 12px; font-weight: 800; }
+  .tab[aria-selected="true"] .tn { background: var(--lime); color: #0B0E0D; }
+  .tabpanel { padding: 4px 2px 0; }
+  .tabpanel[hidden] { display: none; }
+  .tabpanel h4 { font-size: 18px; font-weight: 900; margin: 16px 0 10px; }
+
+  /* ---------- glossary ---------- */
+  .gloss { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 18px 0; }
+  @media (min-width: 640px) { .gloss { grid-template-columns: 1fr 1fr; } }
+  .term { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+  .term dt { font-weight: 800; font-size: 15.5px; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+  .term dt::before { content: ""; width: 8px; height: 8px; border-radius: 3px; background: var(--lime); flex: none; }
+  .term dd { margin: 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.5; }
+
+  /* ---------- download ---------- */
+  .dl-badge {
+    display: flex; align-items: center; gap: 14px; padding: 16px 18px; margin: 14px 0 22px; border-radius: 16px;
+    border: 2px dashed color-mix(in srgb, var(--c-orange) 60%, var(--line));
+    background: color-mix(in srgb, var(--c-orange) var(--tint), var(--surface));
+    font-weight: 700;
+  }
+  .dl-badge .ico { font-size: 24px; flex: none; }
+
+  /* ---------- homework ---------- */
+  .hw { margin: 18px 0; }
+  .hw label {
+    display: flex; gap: 14px; align-items: flex-start; cursor: pointer;
+    padding: 14px 16px; margin-bottom: 8px; border-radius: 14px;
+    background: var(--surface); border: 1px solid var(--line); transition: background .15s ease, border-color .15s ease;
+  }
+  .hw label:hover { border-color: var(--muted); }
+  .hw input { position: absolute; opacity: 0; pointer-events: none; }
+  .hw .box { flex: none; width: 24px; height: 24px; margin-top: 1px; border-radius: 7px; border: 2px solid var(--muted); display: grid; place-items: center; transition: all .15s ease; }
+  .hw .box svg { width: 14px; height: 14px; opacity: 0; color: #0B0E0D; }
+  .hw input:checked + .box { background: var(--lime); border-color: var(--lime); }
+  .hw input:checked + .box svg { opacity: 1; }
+  .hw input:checked ~ .txt { color: var(--muted); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--muted) 60%, transparent); }
+  .hw input:checked ~ .txt b { color: var(--muted); }
+  .hw input:focus-visible + .box { outline: 3px solid var(--lime); outline-offset: 2px; }
+  .hw-count { font-size: 13px; font-weight: 700; color: var(--muted); }
+
+  /* ---------- quiz ---------- */
+  details.q { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 8px; overflow: hidden; }
+  details.q summary {
+    list-style: none; cursor: pointer; padding: 15px 18px; font-weight: 700; font-size: 15.5px;
+    display: flex; gap: 12px; align-items: center;
+  }
+  details.q summary::-webkit-details-marker { display: none; }
+  details.q summary::after { content: "+"; margin-left: auto; flex: none; width: 28px; height: 28px; border-radius: 9px; background: var(--surface-2); display: grid; place-items: center; font-size: 18px; font-weight: 700; transition: transform .2s ease, background .2s ease; }
+  details.q[open] summary::after { transform: rotate(45deg); background: var(--lime); color: #0B0E0D; }
+  details.q .ans { padding: 0 18px 16px; color: var(--ink-2); border-top: 1px dashed var(--line); padding-top: 12px; margin: 0 18px; padding-left: 0; padding-right: 0; }
+
+  /* ---------- next ---------- */
+  .next {
+    display: flex; align-items: center; gap: 16px; margin-top: 30px; padding: 22px; border-radius: var(--radius);
+    background: var(--lime); color: #0B0E0D; text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  a.next:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(200,241,53,.35); }
+  a.next:hover .next__arr { transform: translateX(3px); }
+  .next__arr { transition: transform .15s ease; }
+  .next__go { margin-left: auto; flex: none; font-weight: 800; font-size: 13px; white-space: nowrap; }
+  @media (max-width: 520px) { .next__go { display: none; } }
+  .next b { color: #0B0E0D; }
+  .next__arr { flex: none; width: 46px; height: 46px; border-radius: 14px; background: #0B0E0D; color: var(--lime); display: grid; place-items: center; font-size: 22px; font-weight: 900; }
+  .next p { margin: 0; font-size: 15.5px; line-height: 1.5; }
+
+  footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 26px 0 40px; color: var(--muted); font-size: 13px; text-align: center; }
+
+  /* ---------- floating ---------- */
+  .fab {
+    position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 40;
+    height: 46px; padding: 0 16px; border-radius: 999px; border: 0; cursor: pointer;
+    background: var(--ink); color: var(--bg); font: 800 13px "Montserrat", sans-serif;
+    display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 10px 28px rgba(0,0,0,.25);
+    opacity: 0; transform: translateY(12px); pointer-events: none; transition: all .2s ease; text-decoration: none;
+  }
+  .fab.show { opacity: 1; transform: none; pointer-events: auto; }
+  .fab .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lime); }
+  @media (min-width: 1100px) { .fab { display: none; } }
+
+  /* ---------- lightbox ---------- */
+  .lb { position: fixed; inset: 0; z-index: 100; background: #0B0E0D; display: none; flex-direction: column; }
+  .lb.open { display: flex; }
+  .lb__bar { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; color: #F4F5F0; font-size: 13px; font-weight: 600; gap: 12px; }
+  .lb__close { border: 0; background: var(--lime); color: #0B0E0D; font: 800 13px "Montserrat", sans-serif; height: 38px; padding: 0 16px; border-radius: 999px; cursor: pointer; }
+  .lb__scroll { flex: 1; overflow: auto; -webkit-overflow-scrolling: touch; display: flex; align-items: center; padding: 0 16px 24px; }
+  .lb__scroll img { max-width: none; width: auto; height: auto; max-height: 82vh; margin: auto; background: #fff; border-radius: 10px; }
+  .lb__scroll img { max-width: 100%; }
+  @media (max-width: 900px) { .lb__scroll img { width: 240vw; max-width: none; max-height: none; } }
+
+
+  /* ---------- module nav ---------- */
+  .back { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 18px; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); }
+  .back:hover { color: var(--ink); border-color: var(--ink); }
+  .nav-pair { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 30px; }
+  .nav-pair .next { margin-top: 0; }
+  @media (min-width: 760px) { .nav-pair { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); } }
+  .prev { display: flex; align-items: center; gap: 14px; padding: 18px; border-radius: var(--radius); text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); font-weight: 700; font-size: 14.5px; line-height: 1.4; transition: border-color .15s ease; }
+  .prev:hover { border-color: var(--ink); }
+  .prev__arr { flex: none; width: 40px; height: 40px; border-radius: 12px; background: var(--surface-2); display: grid; place-items: center; font-weight: 900; font-size: 18px; }
+  .prev__k { display: block; font-size: 11.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+
+  /* ---------- sub headings & nested lists ---------- */
+  h4.sub { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 800; margin: 24px 0 10px; }
+  .sub__n { flex: none; width: 28px; height: 28px; border-radius: 8px; background: var(--lime); color: #0B0E0D; display: grid; place-items: center; font-size: 14px; font-weight: 900; }
+  li > ul { margin: 8px 0 0; }
+  li > ul > li { margin-bottom: 6px; color: var(--ink-2); font-style: italic; }
+  li > ul > li::before { width: 6px; height: 2px; border-radius: 1px; top: .8em; box-shadow: none; background: var(--muted); }
+  details.q--example { margin: 18px 0; border-color: color-mix(in srgb, var(--c-yellow) 40%, var(--line)); }
+  details.q--example .ans ul { margin: 0; }
+
+  mark { background: var(--mark); color: inherit; padding: 0 .12em; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="#top" aria-label="В начало конспекта">
+      <span class="brand__dot">D</span>
+      <span class="brand__txt">
+        <span class="brand__name">Модуль 3 · Конспект</span>
+        <span class="brand__sub">Антихрупкая система продаж</span>
+      </span>
+    </a>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Переключить светлую и тёмную тему">
+      <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
+      <span id="themeLbl">Тема</span>
+    </button>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+</header>
+
+<div class="layout">
+  <aside class="side" aria-label="Навигация по конспекту">
+    <div class="side__in">
+      <p class="side__label">Оглавление</p>
+      <nav id="sideNav">
+        <a href="#logika"><span class="n">Схема</span>Вся логика модуля</a>
+        <a href="#urok-1"><span class="n">Урок 1</span>Как лид-магнит создаёт желание купить</a>
+        <a href="#urok-2"><span class="n">Урок 2</span>Почему полезные не продают</a>
+        <a href="#urok-3"><span class="n">Урок 3</span>Три принципа</a>
+        <a href="#urok-4"><span class="n">Урок 4</span>Шесть типов</a>
+        <a href="#urok-5"><span class="n">Урок 5</span>Конструктор лид-магнита</a>
+        <a href="#slovar"><span class="n">Справка</span>Словарь модуля</a>
+        <a href="#materialy"><span class="n">Скачать</span>Материалы для скачивания</a>
+        <a href="#dz"><span class="n">Практика</span>Домашнее задание</a>
+        <a href="#proverka"><span class="n">Тест</span>Проверь себя</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main id="top">
+    <!-- ===== HERO ===== -->
+    <div class="hero">
+      <a class="back" href="https://asp-modul-2.vercel.app/">← Модуль 2. Сердце воронки</a>
+      <div class="eyebrow">
+        <span class="chip chip--lime">🎬 Модуль 3</span>
+        <span class="chip chip--ghost">Конспект</span>
+      </div>
+      <h1>Мощный <span class="hl">лид-магнит</span></h1>
+      <p class="lead">Лид-магнит это <b>самое важное звено воронки</b>: с него начинается путь человека к покупке. Здесь разбираем, <b>как лид-магнит создаёт желание купить именно у вас</b>, три принципа сильного лид-магнита, шесть рабочих типов и <b>конструктор</b>, по которому он собирается.</p>
+      <div class="result-card">
+        <div class="result-card__ico" aria-hidden="true">🏁</div>
+        <p><b>Результат модуля:</b> готовый лид-магнит, его разметка, файл «О лид-магните» и страница, которую можно сразу выложить.</p>
+      </div>
+    </div>
+
+    <!-- ===== TOC ===== -->
+    <section class="sec" id="oglavlenie" aria-labelledby="toc-h">
+      <div class="toc">
+        <h2 id="toc-h">📑 Оглавление</h2>
+        <ol>
+          <li><a href="#urok-1"><span class="k">1</span><span>Урок 1. Что такое лид-магнит и как он создаёт желание купить</span><span class="arr">↓</span></a></li>
+          <li><a href="#urok-2"><span class="k">2</span><span>Урок 2. Почему полезные лид-магниты не продают</span><span class="arr">↓</span></a></li>
+          <li><a href="#urok-3"><span class="k">3</span><span>Урок 3. Три принципа мощного лид-магнита</span><span class="arr">↓</span></a></li>
+          <li><a href="#urok-4"><span class="k">4</span><span>Урок 4. Шесть рабочих типов лид-магнитов</span><span class="arr">↓</span></a></li>
+          <li><a href="#urok-5"><span class="k">5</span><span>Урок 5. Конструктор лид-магнита</span><span class="arr">↓</span></a></li>
+          <li><a href="#slovar"><span class="k">📖</span><span>Словарь модуля</span><span class="arr">↓</span></a></li>
+          <li><a href="#materialy"><span class="k">📦</span><span>Материалы для скачивания</span><span class="arr">↓</span></a></li>
+          <li><a href="#dz"><span class="k">📝</span><span>Домашнее задание</span><span class="arr">↓</span></a></li>
+          <li><a href="#proverka"><span class="k">🧪</span><span>Проверь себя</span><span class="arr">↓</span></a></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== LOGIKA ===== -->
+    <section class="sec" id="logika">
+      <h2 class="sec-title">🗺 Вся логика модуля на одной картинке</h2>
+      <figure class="scheme">
+        <button class="scheme__frame" type="button" data-zoom aria-label="Открыть схему крупно">
+          <img src="img/01-logika-modulya.webp" width="1800" height="366" alt="Логика модуля 3: вступление (зацеп, что получит, кто я) → рамка проблемы → почему не решается обычным путём → как на самом деле, смысловой сдвиг → конкретика, метод и демонстрация → оффер, мостик к продукту.">
+          <span class="scheme__zoom">⤢ Крупнее</span>
+        </button>
+      </figure>
+      <div class="co co--yellow">
+        <div class="co__ico">💡</div>
+        <div class="co__body"><p><b>Лид-магнит переводит человека из наблюдателя в того, кто хочет купить именно у вас.</b> Работает это на трёх принципах: <b>смысловой сдвиг</b> создаёт доверие, <b>свой способ решения</b> отстраивает от конкурентов, <b>мостик к продукту</b> направляет желание в покупку.</p></div>
+      </div>
+    </section>
+
+    <!-- ===== УРОК 1 ===== -->
+    <section class="sec" id="urok-1">
+      <div class="lesson-label"><span class="num">Урок 1</span></div>
+      <h2 class="sec-title">Что такое лид-магнит и как он создаёт желание купить</h2>
+
+      <h3>🏆 Почему лид-магнит важнее всего</h3>
+      <ul>
+        <li>Топовые западные маркетологи вкладывают в лид-магниты <b>до 80% усилий</b>: больше, чем в продающие страницы, офферы и дожимы.</li>
+        <li>Это <b>первое касание</b>: после него человек либо заходит в ваш мир, либо проходит мимо.</li>
+        <li><b>Сильный лид-магнит</b> вытягивает даже кривой бот и простой сайт. <b>Слабый</b> не спасёт никакая упаковка.</li>
+      </ul>
+
+      <h3>🎯 Главная функция лид-магнита</h3>
+      <div class="co co--blue co--lead">
+        <div class="co__ico">📌</div>
+        <div class="co__body">
+          <p><b>Лид-магнит переводит человека из наблюдателя и слушателя в того, кто хочет купить именно у вас.</b></p>
+          <p>Его задача не дать пользу, а <b>изменить отношение человека к проблеме</b> так, чтобы появилась потребность решать её <b>с вами</b>.</p>
+        </div>
+      </div>
+      <ul>
+        <li>Привычное «бесплатный полезный материал в обмен на контакт» верно, но <b>упускает главное</b>.</li>
+        <li>Желание купить возникает <b>естественно</b>: без уговоров, давления и дедлайнов. Человек сам продаёт себе мысль прийти к вам.</li>
+      </ul>
+
+      <h3>💬 Идеальная реакция на лид-магнит</h3>
+      <div class="cols">
+        <div class="co">
+          <div class="co__ico">😐</div>
+          <div class="co__body">
+            <p><b>Так не надо</b></p>
+            <p>«Сохранил, посмотрю потом»<br>«Прикольно, спасибо»</p>
+          </div>
+        </div>
+        <div class="co co--green">
+          <div class="co__ico">🤯</div>
+          <div class="co__body">
+            <p><b>Вот что нужно</b></p>
+            <p>«А, вот оно что! Так вот почему у меня не получается»<br><b>+ «Похоже, этому эксперту можно доверить решение»</b></p>
+          </div>
+        </div>
+      </div>
+
+      <h3>🛤 Два пути к желанию купить</h3>
+      <figure class="scheme">
+        <button class="scheme__frame" type="button" data-zoom aria-label="Открыть схему крупно">
+          <img src="img/02-dva-puti.webp" width="1343" height="887" loading="lazy" alt="Два пути к желанию купить именно у вас: путь 1, понимание, инсайт и новый взгляд на проблему; путь 2, маленькая победа, инструмент сработал.">
+          <span class="scheme__zoom">⤢ Крупнее</span>
+        </button>
+      </figure>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th>Путь 1. Понимание проблемы</th><th>Путь 2. Опыт маленькой победы</th></tr></thead>
+          <tbody>
+            <tr><td><b>Роль</b></td><td><b>Основной</b></td><td>Усилитель</td></tr>
+            <tr><td><b>Как работает</b></td><td>Человек по-новому видит проблему, испытывает инсайт, между вами возникает связь</td><td>Человек применяет ваш инструмент и сразу чувствует, что он работает</td></tr>
+            <tr><td><b>Форматы</b></td><td>Разбор проблемы с другой стороны, ошибки, ваш метод, кейс клиента, личная история</td><td>Шаблон, таблица, калькулятор, скрипт, промпт, пошаговая инструкция</td></tr>
+            <tr><td><b>Где работает</b></td><td>Почти везде. <b>Обязателен</b> там, где нельзя дать готовый инструмент: психология, отношения, здоровье, стратегия</td><td>Где есть повторяемое действие с быстрым результатом: маркетинг, копирайтинг, финансы, дизайн</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-hint">← Таблицу можно листать вбок →</p>
+      <div class="co co--red">
+        <div class="co__ico">🔥</div>
+        <div class="co__body"><p><b>Самая сильная связка: понимание + опыт.</b> Человек начал думать по-другому и немного попробовал, но <b>проблему до конца не решил</b>. И путь у него остаётся один: к вам.</p></div>
+      </div>
+
+      <div class="summary">
+        <div class="summary__h"><span class="tick">✓</span>Главное из урока 1</div>
+        <ul>
+          <li>Лид-магнит это <b>самое важное звено</b> воронки.</li>
+          <li>Его задача <b>не польза, а желание купить именно у вас</b>.</li>
+          <li>Идеальная реакция: <b>«а, вот оно что» + «ему можно доверять»</b>.</li>
+          <li>Два пути: <b>понимание</b> (основной) и <b>маленькая победа</b> (усилитель). Лучше всего вместе.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== УРОК 2 ===== -->
+    <section class="sec" id="urok-2">
+      <div class="lesson-label"><span class="num">Урок 2</span></div>
+      <h2 class="sec-title">Почему полезные лид-магниты не продают</h2>
+
+      <h3>🎁 Польза сама по себе не продаёт</h3>
+      <ul>
+        <li>Полезный самодостаточный инструмент <b>работает автономно</b>: человек взял, сказал спасибо и ушёл применять.</li>
+        <li><b>Чем самодостаточнее</b> инструмент, тем легче с ним пропасть.</li>
+      </ul>
+      <div class="co co--red">
+        <div class="co__ico">🧨</div>
+        <div class="co__body"><p><b>Польза без мостика к продукту это пустая трата ваших сил.</b></p></div>
+      </div>
+
+      <h3>🌉 Мостик к продукту</h3>
+      <ul>
+        <li>Переход от бесплатного к платному, <b>зашитый внутрь лид-магнита</b>, а не продажа в конце.</li>
+        <li><b>Красная нить</b> через весь материал: человек сам делает вывод, что дальше нужно к вам.</li>
+        <li>Подробно разбираем в <a href="#most">уроке 3</a>.</li>
+      </ul>
+
+      <h3>🍳 Лид-магнит и трипваер: рецепт и готовый набор</h3>
+      <div class="cols">
+        <div class="co co--blue">
+          <div class="co__ico">📖</div>
+          <div class="co__body">
+            <p><b>Лид-магнит = рецепт</b></p>
+            <p>Показываете, <b>что и как</b> делать. Человек получает инсайт или маленькую победу, но <b>проблему до конца не решает</b>. Дальше ему нужно делать руками и ошибаться.</p>
+          </div>
+        </div>
+        <div class="co co--green">
+          <div class="co__ico">🎁</div>
+          <div class="co__body">
+            <p><b>Трипваер = готовый набор</b></p>
+            <p><b>Гарантированный результат</b> через ваше готовое решение: собрано, проверено, без ошибок. Открыл, применил, получил.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>⚖️ Граница бесплатного и платного</h3>
+      <ul>
+        <li>Проходит <b>не по объёму</b>: лид-магнит может быть хоть 4-часовой лекцией или мини-курсом на 5 дней.</li>
+        <li>Проходит <b>по удобству, скорости и готовности к применению</b>.</li>
+        <li><b>Маленькая победа в лид-магните это вкус, а не сытость.</b></li>
+      </ul>
+      <details class="q q--example">
+        <summary><span><b>Примеры пар «лид-магнит → трипваер»</b> (раскройте)</span></summary>
+        <div class="ans">
+          <ul>
+            <li><b>Юрист.</b> Лид-магнит: «5 пунктов в договоре, из-за которых вы не взыщете деньги». Трипваер: 15 готовых договоров, формулировки-предохранители, образцы претензий.</li>
+            <li><b>Финансы.</b> Лид-магнит: «Почему выручка есть, а денег на счету нет». Трипваер: таблица управленческого учёта, шаблон финмодели, чек-лист утечек прибыли.</li>
+            <li><b>Дизайн интерьера.</b> Лид-магнит: «7 ошибок в планировке, из-за которых квартира выглядит дёшево». Трипваер: готовые планировочные решения, палитры, чек-лист приёмки ремонта, шаблон сметы.</li>
+            <li><b>IT.</b> Лид-магнит: «Почему джуны месяцами не получают офферы». Трипваер: банк вопросов с собеседований, шаблон резюме, скрипт самопрезентации.</li>
+          </ul>
+        </div>
+      </details>
+
+      <div class="summary">
+        <div class="summary__h"><span class="tick">✓</span>Главное из урока 2</div>
+        <ul>
+          <li>Готовые инструменты, даже очень полезные, <b>сами по себе не продают</b>.</li>
+          <li>Без <b>мостика к продукту</b> человек получит пользу и уйдёт.</li>
+          <li>Лид-магнит это <b>рецепт</b>, трипваер это <b>готовый набор</b>.</li>
+          <li>Граница бесплатного и платного <b>не в объёме, а в готовности к применению</b>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== УРОК 3 ===== -->
+    <section class="sec" id="urok-3">
+      <div class="lesson-label"><span class="num">Урок 3</span></div>
+      <h2 class="sec-title">Три принципа мощного лид-магнита</h2>
+
+      <h3 id="sdvig">1️⃣ Смысловой сдвиг (главный принцип)</h3>
+      <ul>
+        <li>Момент, когда после <b>понятного объяснения</b> человек видит свою проблему иначе и думает: <b>«а, вот оно что»</b>.</li>
+        <li>Задача не дать побольше пользы, а <b>вызвать сдвиги</b>. Видео на 20 минут с пачкой сдвигов превращает зрителя в клиента.</li>
+        <li>Доверие возникает <b>не от регалий</b>, а от ощущения «этот эксперт понятно объяснил мне, в чём моя проблема».</li>
+        <li>Сильный эксперт <b>сложное объясняет на пальцах</b>.</li>
+      </ul>
+
+      <h4 class="sub"><span class="sub__n">?</span>Откуда берётся сдвиг</h4>
+      <figure class="scheme">
+        <button class="scheme__frame" type="button" data-zoom aria-label="Открыть схему крупно">
+          <img src="img/03-karkas-sdviga.webp" width="1800" height="394" loading="lazy" alt="Каркас смыслового сдвига: что человек делал → почему это не работает → как на самом деле и почему → решение.">
+          <span class="scheme__zoom">⤢ Крупнее</span>
+        </button>
+      </figure>
+      <ul>
+        <li>Из <b>разрыва</b>: человек понял, что делал неправильно, <b>почему</b>, и сам дошёл до правильного вывода.</li>
+        <li>Держится на <b>причинно-следственной связи</b>. «Вы делали не так, делайте так, поверьте мне» - не будет работать.</li>
+      </ul>
+      <div class="co co--blue">
+        <div class="co__ico">🧱</div>
+        <div class="co__body"><p><b>Каркас смыслового сдвига:</b> что человек делал → почему это не работает → как устроено на самом деле и почему → решение. Разжёвываем <b>по шагам, как ребёнку</b>.</p></div>
+      </div>
+      <details class="q q--example">
+        <summary><span><b>Пример смыслового сдвига</b> (раскройте)</span></summary>
+        <div class="ans">
+          <ul>
+            <li><b>Думает:</b> окна продувают, в квартире холодно, значит, надо менять стеклопакеты.</li>
+            <li><b>На самом деле:</b> тепло уходит не через стекло, а через <b>мостики холода</b>: стыки стен и пола, углы примыкания плит, монтажные швы.</li>
+            <li><b>Что будет:</b> поменяет окна на дорогие, а угол как мёрз и покрывался плесенью, так и продолжит.</li>
+            <li><b>Решение:</b> сначала пройтись тепловизором и утеплить конкретный узел. Замена окон это последний вариант.</li>
+          </ul>
+        </div>
+      </details>
+
+      <h3>2️⃣ Свой способ решения</h3>
+      <ul>
+        <li>Мозг <b>любит новые способы решить старую проблему</b>: это вызывает интерес и <b>отстраивает вас от конкурентов</b>.</li>
+        <li>Изобретать ничего не нужно. Это либо <b>ваш подход</b> («обычно делают так, а я делаю так»), либо <b>другой угол</b> на проблему.</li>
+        <li><b>Не выдумывайте метод ради метода</b> и не обещайте волшебных таблеток. Нет своего метода, показывайте другой угол.</li>
+      </ul>
+
+      <h3 id="most">3️⃣ Мостик к продукту</h3>
+      <div class="co co--blue co--lead">
+        <div class="co__ico">📌</div>
+        <div class="co__body"><p><b>Смысловой сдвиг создаёт доверие и желание, а мостик направляет это желание в покупку именно у вас.</b> Без мостика человек прогреется и купит у того, кто позвал.</p></div>
+      </div>
+      <ul>
+        <li><b>Лёгкие упоминания</b> продукта по ходу материала: <b>3-4 раза</b>, начиная <b>с самого начала</b>.</li>
+        <li>Ставим там, где <b>польза упирается в границу платного</b>.</li>
+        <li>Упоминание <b>привязано к пользе</b> и звучит естественно. Польза доминирует, это не рекламное полотно.</li>
+        <li><b>Честно с самого начала:</b> «бесплатно покажу всё, а готовое решение есть в платном». Не прячьте главное «в курсе после оплаты».</li>
+      </ul>
+      <details class="q q--example">
+        <summary><span><b>Пример: 4 мостика в лид-магните юриста</b> (раскройте)</span></summary>
+        <div class="ans">
+          <ol>
+            <li><b>Вступление:</b> «Такие договоры мне приносят каждую неделю, когда деньги уже зависли».</li>
+            <li><b>По ходу:</b> «Эту формулировку я вставляю во все договоры своих клиентов».</li>
+            <li><b>На границе платного:</b> «Проверить договор по этим пунктам вы теперь сможете сами. А написать договор, который вас защищает, это другая работа. С этим приходите ко мне».</li>
+            <li><b>Финал:</b> «Если не хотите рисковать, у меня есть готовый пакет из 15 договоров. Ссылка под видео».</li>
+          </ol>
+        </div>
+      </details>
+
+      <h3>❌ 7 ошибок, из-за которых лид-магнит не работает</h3>
+      <ol class="ol-err">
+        <li><b>Польза есть, а смыслового сдвига нет.</b> Посмотрели, покивали, забыли.</li>
+        <li><b>Затёртый формат.</b> Слова «гайд» и «чек-лист» уже вызывают отторжение.</li>
+        <li><b>Промахнулись по боли.</b> Важно вам, а не клиенту.</li>
+        <li><b>Слишком широкая тема.</b> Про информацию, а не про ситуацию.</li>
+        <li><b>Слишком длинно.</b> Человек не дошёл до сути.</li>
+        <li><b>Нет мостиков</b> или они только в самом конце, куда большинство не доходит.</li>
+        <li><b>Продажа сразу после выдачи.</b> Дайте человеку 1-2 дня изучить материал.</li>
+      </ol>
+
+      <div class="summary">
+        <div class="summary__h"><span class="tick">✓</span>Главное из урока 3</div>
+        <ul>
+          <li><b>Смысловой сдвиг</b> держится на причинно-следственной связи: что делал → почему не работает → как на самом деле → решение.</li>
+          <li><b>Свой способ решения</b> не изобретают: это ваш подход или другой угол.</li>
+          <li><b>Мостик к продукту:</b> 3-4 лёгких упоминания, начиная с самого начала.</li>
+          <li>Все три принципа <b>обязательны</b>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== УРОК 4 ===== -->
+    <section class="sec" id="urok-4">
+      <div class="lesson-label"><span class="num">Урок 4</span></div>
+      <h2 class="sec-title">Шесть рабочих типов лид-магнитов</h2>
+      <p>Типы расположены <b>по силе</b>. Это не ограничение: чаще всего хватает <b>1-2 типов</b>.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Тип</th><th>Как работает</th><th>Важно</th></tr></thead>
+          <tbody>
+            <tr><td><b>1. Подборка материалов или инструментов</b> 📚</td><td>Закрытый канал, база уроков, подборка шаблонов или ресурсов. Цепляет <b>объёмом</b>: «бесплатно мимо такого не пройду»</td><td>Не закрывает проблему целиком: после неё человек упирается в задачу, которую решает ваш продукт. Нужно время на наполнение</td></tr>
+            <tr><td><b>2. Видео на болевую тему или частый вопрос</b> 🎥</td><td>Снимаете страх, объясняете причину проблемы. Человек чувствует облегчение и доверие</td><td><b>Самый распространённый.</b> Не знаете, с чего начать, начинайте с него</td></tr>
+            <tr><td><b>3. Разбор ошибок или мифов</b> ⚠️</td><td>Человек узнаёт себя в ошибках и получает цепочку сдвигов. «Все делают так, а на самом деле надо так»</td><td><b>Ошибка:</b> уже сделал не так. <b>Миф:</b> верит, но ещё не начал. Без токсичности к коллегам</td></tr>
+            <tr><td><b>4. Разбор чужого приёма или аудит</b> 🔍</td><td>Разбор известного бренда или человека. Интерес к авторитету + ваша экспертность нативно</td><td>Без «обсирания». Скорее второй приоритет</td></tr>
+            <tr><td><b>5. Разбор вашего метода или кейса клиента</b> 📈</td><td>Человек узнаёт себя в клиенте и видит <b>систему за результатом</b></td><td>Лучше работает, когда <b>уже есть аудитория</b> и узнаваемость</td></tr>
+            <tr><td><b>6. Демо или пробный доступ</b> 🧪</td><td>Бесплатная тренировка, разбор, неделя доступа, первый урок. Попробовал, понравилось, готов платить</td><td>Самый простой вход, лучше всех <b>снимает возражения</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-hint">← Таблицу можно листать вбок →</p>
+
+      <div class="summary">
+        <div class="summary__h"><span class="tick">✓</span>Главное из урока 4</div>
+        <ul>
+          <li>Шесть типов: <b>подборка, болевое видео, ошибки и мифы, разбор чужого, свой метод или кейс, демо</b>.</li>
+          <li>Начинать проще всего с <b>видео на болевую тему</b>.</li>
+          <li>В любом типе работают <b>те же <a href="#urok-3">три принципа</a></b>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== УРОК 5 ===== -->
+    <section class="sec" id="urok-5">
+      <div class="lesson-label"><span class="num">Урок 5</span></div>
+      <h2 class="sec-title">Конструктор лид-магнита</h2>
+      <ul>
+        <li>На платформе лежит <b>плейбук «Продающий лид-магнит»</b>: в нём все принципы, примеры названий и структура. <b>Изучите его вручную.</b></li>
+        <li>По тем же правилам работает ИИ-ассистент <b>«Сценарист лид-магнита»</b>.</li>
+      </ul>
+
+      <h3>🧾 Что нужно на входе</h3>
+      <ol>
+        <li><b>Продукт</b>, к которому ведёт воронка.</li>
+        <li><b>Горящая тема.</b></li>
+        <li><b>Сегмент</b>, для которого делаем.</li>
+        <li><b>Тип</b> лид-магнита.</li>
+        <li><b>Следующий шаг</b> после лид-магнита: КЭВ или мини-продукт.</li>
+        <li><b>Конкретное обещание:</b> что человек получит.</li>
+      </ol>
+      <div class="co co--blue">
+        <div class="co__ico">🏷</div>
+        <div class="co__body"><p><b>Название решает, посмотрят или пролистают.</b> Человек должен сразу понять, что это <b>про него</b> и что это <b>ему полезно</b>. Элементы сильных названий и примеры есть в плейбуке.</p></div>
+      </div>
+
+      <h3 id="struktura">🏗 Структура лид-магнита</h3>
+      <figure class="scheme">
+        <button class="scheme__frame" type="button" data-zoom aria-label="Открыть схему крупно">
+          <img src="img/04-struktura-lid-magnita.webp" width="1800" height="363" loading="lazy" alt="Структура лид-магнита из 10 блоков. Вступление: 1 зацеп, 2 что получит, 3 кто я. Контентная часть: 4 рамка проблемы, 5 почему не решается обычным путём, 6 как на самом деле и вывод. Финал: 7 конкретика, 8 доказательства, 9 маленькая победа, 10 оффер и мостик.">
+          <span class="scheme__zoom">⤢ Крупнее</span>
+        </button>
+      </figure>
+
+      <h4 class="sub"><span class="sub__n">1</span>Вступление: человек должен за 15 секунд понять, что он по адресу</h4>
+      <ol>
+        <li><b>Зацеп.</b> Обещание результата, слом привычного убеждения или удар в конкретную ситуацию.</li>
+        <li><b>Что человек получит.</b> Конкретно и со временем: «за следующие 12 минут разберём...».</li>
+        <li><b>Кто я и чем полезен.</b> Мимоходом, 1-2 фразы + первый мостик к продукту.</li>
+      </ol>
+
+      <h4 class="sub"><span class="sub__n">2</span>Контентная часть: сердце лид-магнита</h4>
+      <ol style="counter-reset: n 3">
+        <li><b>Рамка проблемы.</b> О чём говорим и что будет, если не решать.</li>
+        <li><b>Почему не решается обычным путём.</b> Привычный путь → что из этого выходит → снятие вины («вы не виноваты, вам давали не те советы»). Варианты: <b>ложный совет, не та причина, слепая зона</b>.</li>
+        <li><b>Как устроено на самом деле.</b> Настоящая причина и <b>полная цепочка</b> до симптома. Здесь происходит инсайт. Закрепляем <b>выводом</b> одной фразой.</li>
+      </ol>
+
+      <h4 class="sub"><span class="sub__n">3</span>Финал</h4>
+      <ol style="counter-reset: n 6">
+        <li><b>Конкретика:</b> шаги, демонстрация, ваш метод, тест.</li>
+        <li><b>Доказательства</b> (по желанию): кейсы, отзывы.</li>
+        <li><b>Маленькая победа</b> (по желанию): упражнение или инструмент, который можно забрать.</li>
+        <li><b>Прямой оффер и мостик к продукту.</b></li>
+      </ol>
+
+      <div class="co co--orange">
+        <div class="co__ico">🎯</div>
+        <div class="co__body"><p><b>1-2, максимум 3 сильных смысла.</b> Человек усваивает около <b>20%</b> новой информации. Не превращайте лид-магнит в лекцию: лучше точечно и до конца.</p></div>
+      </div>
+      <details class="q q--example">
+        <summary><span><b>Пример по структуре: остеопат, боль в пояснице</b> (раскройте)</span></summary>
+        <div class="ans">
+          <ul>
+            <li><b>Зацеп:</b> «Если ходите на массаж, отпускает на три дня, а через месяц боль возвращается сильнее, сейчас покажу причину».</li>
+            <li><b>Что получит:</b> «За 12 минут разберём, почему боль возвращается, а в конце дам тест на 30 секунд».</li>
+            <li><b>Кто я:</b> «Я остеопат, 9 лет практики, с такой поясницей ко мне приходит каждый второй».</li>
+            <li><b>Рамка:</b> через полгода к пояснице добавляются шея и колено, жизнь начинает строиться вокруг спины.</li>
+            <li><b>Обычный путь:</b> массаж и укрепление спины. Помогает, но боль возвращается. Вы не виноваты, просто начали не с того.</li>
+            <li><b>На самом деле:</b> поясница делает чужую работу. Стопа перестала гасить удар → колено разворачивается → таз перекашивается → мышцы с одной стороны перегружены и болят.</li>
+            <li><b>Вывод:</b> лечить нужно не поясницу, а начинать с проверки стоп.</li>
+            <li><b>Оффер:</b> диагностическая сессия, ссылка под видео.</li>
+          </ul>
+        </div>
+      </details>
+      <div class="co co--red">
+        <div class="co__ico">🔎</div>
+        <div class="co__body"><p><b>Проверяйте каждый сценарий от ИИ:</b> есть ли все блоки, особенно <b>смысловой сдвиг и мостики</b>. Если нет эффекта «а, вот оно что», то лид-магнит не сработает. В конце плейбука есть чек-лист проверки.</p></div>
+      </div>
+
+      <div class="summary">
+        <div class="summary__h"><span class="tick">✓</span>Главное из урока 5</div>
+        <ul>
+          <li>На входе <b>6 пунктов</b>: продукт, тема, сегмент, тип, следующий шаг, обещание.</li>
+          <li>Структура: <b>вступление → контентная часть со сдвигом → конкретика → оффер</b>.</li>
+          <li>Главный блок: <b>«почему не решается обычным путём» + «как на самом деле»</b>.</li>
+          <li><b>1-3 сильных смысла</b>, а не лекция.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== СЛОВАРЬ ===== -->
+    <section class="sec" id="slovar">
+      <h2 class="sec-title">📖 Словарь модуля</h2>
+      <dl class="gloss">
+        <div class="term"><dt>Лид-магнит</dt><dd>Бесплатный материал, который переводит человека из наблюдателя в того, кто хочет купить у вас</dd></div>
+        <div class="term"><dt>Смысловой сдвиг</dt><dd>Момент, когда человек по-новому видит свою проблему: «а, вот оно что»</dd></div>
+        <div class="term"><dt>Причинно-следственная связь</dt><dd>Полная цепочка: почему возникла проблема, почему не сработали действия и что делать</dd></div>
+        <div class="term"><dt>Свой способ решения</dt><dd>Ваш подход или другой угол на проблему, который отстраивает от конкурентов</dd></div>
+        <div class="term"><dt>Мостик к продукту</dt><dd>Лёгкие упоминания продукта по ходу материала, которые направляют желание в покупку</dd></div>
+        <div class="term"><dt>Маленькая победа</dt><dd>Быстрый результат от вашего инструмента. Вкус, а не сытость</dd></div>
+        <div class="term"><dt>Дискредитация существующих методов</dt><dd>Блок, где показываем, почему привычный путь не решает проблему</dd></div>
+      </dl>
+    </section>
+
+    <!-- ===== МАТЕРИАЛЫ ===== -->
+    <section class="sec" id="materialy">
+      <h2 class="sec-title">📦 Материалы для скачивания</h2>
+      <div class="co co--red">
+        <div class="co__ico">⚠️</div>
+        <div class="co__body"><p><b>Главная точка проверки во всём курсе: смысловой сдвиг.</b> Сдвиг нельзя выдумать, его можно только достать из живого опыта. Спросите себя прямо: <b>это правда в моей практике или просто красиво звучит?</b></p></div>
+      </div>
+
+      <div class="co co--blue co--lead">
+        <div class="co__ico">📘</div>
+        <div class="co__body">
+          <p><b>Плейбук «Продающий лид-магнит»</b></p>
+          <p>Принципы, названия, шесть типов, структура по блокам и чек-лист проверки готового сценария.</p>
+        </div>
+      </div>
+      <div class="dl-badge"><span class="ico">📦</span><span>Скачайте плейбук с платформы внутри 3 модуля</span></div>
+
+      <div class="co co--purple co--lead">
+        <div class="co__ico">✍️</div>
+        <div class="co__body">
+          <p><b>ИИ-ассистент №5. Сценарист лид-магнита</b></p>
+          <p>Ведёт вас по 5 шагам: <b>тема и вопросы → проверка смыслового сдвига → статья с разметкой → финальные правки → файл «О лид-магните»</b>.</p>
+          <p>По команде «оформи в страницу» собирает страницу лид-магнита и помогает выложить её в интернет.</p>
+          <p><b>Берёт:</b> <a href="https://asp-modul-1.vercel.app/#materialy">«01 Фактура»</a>, <a href="https://asp-modul-2.vercel.app/#materialy">«02 ДНК воронки»</a>, выбранную тему. <b>Отдаёт:</b> «03 Лид-магнит», «03 Разметка», «03 О лид-магните», «03 Страница».</p>
+        </div>
+      </div>
+      <div class="dl-badge"><span class="ico">📦</span><span>Скачайте ассистента (ZIP для установки) с платформы внутри 3 модуля</span></div>
+
+      <p><b>Как работать:</b></p>
+      <ol>
+        <li>Изучите плейбук «Продающий лид-магнит».</li>
+        <li>Скачайте ZIP с платформы (3 модуль), распаковывать не нужно, и установите ассистента по инструкции из урока.</li>
+        <li>Запустите <b>Сценариста</b>, загрузите фактуру, ДНК воронки и выберите тему.</li>
+        <li>Отвечайте на вопросы. На проверке <b>смыслового сдвига</b> остановитесь и честно сверьте его со своей практикой.</li>
+        <li>Доведите статью до результата, который вас полностью устраивает.</li>
+        <li>Попросите <b>«оформи в страницу»</b> и выложите страницу в интернет.</li>
+      </ol>
+      <div class="co co--green">
+        <div class="co__ico">🏆</div>
+        <div class="co__body"><p><b>Быстрая победа модуля:</b> вы видите свою тему, сформулированную так, как сами никогда её не формулировали. А на выходе у вас готовый лид-магнит и страница со ссылкой для шапки профиля, рассылки и закрепа.</p></div>
+      </div>
+    </section>
+
+    <!-- ===== ДЗ ===== -->
+    <section class="sec" id="dz">
+      <h2 class="sec-title">📝 Домашнее задание</h2>
+      <p class="hw-count" id="hwCount" aria-live="polite">Выполнено 0 из 7</p>
+      <div class="hw" id="hw">
+        <label><input type="checkbox" data-hw="1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Изучите плейбук</b> «Продающий лид-магнит».</span></label>
+        <label><input type="checkbox" data-hw="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Возьмите одну тему</b> из ДНК воронки и решите, <b>куда ведёт</b> лид-магнит.</span></label>
+        <label><input type="checkbox" data-hw="3"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Выберите <a href="#urok-4">тип</a></b> лид-магнита.</span></label>
+        <label><input type="checkbox" data-hw="4"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Пройдите все 5 шагов</b> со Сценаристом.</span></label>
+        <label><input type="checkbox" data-hw="5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Проверьте сценарий:</b> есть ли смысловой сдвиг, свой способ и 3-4 мостика к продукту.</span></label>
+        <label><input type="checkbox" data-hw="6"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Оформите в страницу</b> и выложите в интернет.</span></label>
+        <label><input type="checkbox" data-hw="7"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Посмотрите 1-2 видео-лид-магнита Дмитрия на YouTube</b> и найдите в них блоки <a href="#struktura">структуры</a>.</span></label>
+      </div>
+    </section>
+
+    <!-- ===== ПРОВЕРЬ СЕБЯ ===== -->
+    <section class="sec" id="proverka">
+      <h2 class="sec-title">🧪 Проверь себя</h2>
+      <p style="color:var(--muted)">Сначала ответьте сами, потом нажмите на вопрос.</p>
+      <details class="q"><summary>Какая главная функция лид-магнита?</summary><div class="ans">Перевести человека <b>из наблюдателя в того, кто хочет купить именно у вас</b>, изменив его отношение к проблеме.</div></details>
+      <details class="q"><summary>Какими двумя путями лид-магнит создаёт желание купить?</summary><div class="ans"><b>Через понимание проблемы</b> (основной) и <b>через опыт маленькой победы</b> (усилитель). Сильнее всего вместе.</div></details>
+      <details class="q"><summary>Почему полезный инструмент может не продавать?</summary><div class="ans">Он <b>работает автономно</b>: человек взял и ушёл. Без <b>мостика к продукту</b> желания прийти к вам не возникает.</div></details>
+      <details class="q"><summary>Чем лид-магнит отличается от трипваера?</summary><div class="ans">Лид-магнит это <b>рецепт</b>: что и как делать. Трипваер это <b>готовый набор</b>: гарантированный результат без ошибок.</div></details>
+      <details class="q"><summary>Какие три принципа делают лид-магнит мощным?</summary><div class="ans"><b>Смысловой сдвиг, свой способ решения, мостик к продукту.</b></div></details>
+      <details class="q"><summary>Из чего состоит каркас смыслового сдвига?</summary><div class="ans"><b>Что человек делал → почему это не работает → как на самом деле и почему → решение.</b></div></details>
+      <details class="q"><summary>Сколько раз и где ставить мостик к продукту?</summary><div class="ans"><b>3-4 раза, начиная с самого начала</b>, там, где польза упирается в границу платного.</div></details>
+      <details class="q"><summary>С какого типа лид-магнита проще всего начать?</summary><div class="ans">С <b>видео на болевую тему или частый вопрос</b>.</div></details>
+
+      <div class="nav-pair">
+        <a class="prev" href="https://asp-modul-2.vercel.app/">
+          <span class="prev__arr" aria-hidden="true">←</span>
+          <span><span class="prev__k">Назад</span>Модуль 2. Сердце воронки</span>
+        </a>
+        <a class="next" href="https://asp-modul-4.vercel.app/">
+          <div class="next__arr" aria-hidden="true">→</div>
+          <p><b>Дальше: Модуль 4. Прибыльный мини-продукт.</b> Собираем трипваер, который превращает зрителя в клиента и окупает трафик.</p>
+          <span class="next__go">Открыть конспект</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>© Dmitriymarketing School · Практикум «Антихрупкая система продаж» · Материалы только для участников</footer>
+
+  </main>
+</div>
+
+<a class="fab" id="fab" href="#oglavlenie"><span class="dot"></span>Оглавление</a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Схема крупно">
+  <div class="lb__bar"><span id="lbHint">Листайте схему пальцем</span><button class="lb__close" id="lbClose" type="button">Закрыть ✕</button></div>
+  <div class="lb__scroll" id="lbScroll"><img id="lbImg" alt=""></div>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var KEY = 'dm-theme';
+
+  /* ---- theme ---- */
+  function current() {
+    var t = root.getAttribute('data-theme');
+    if (t) return t;
+    return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  function paintLabel() {
+    var lbl = document.getElementById('themeLbl');
+    if (lbl) lbl.textContent = current() === 'dark' ? 'Светлая' : 'Тёмная';
+  }
+  document.getElementById('themeBtn').addEventListener('click', function () {
+    var next = current() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem(KEY, next); } catch (e) {}
+    paintLabel();
+  });
+  if (window.matchMedia) {
+    var mq = matchMedia('(prefers-color-scheme: dark)');
+    if (mq.addEventListener) mq.addEventListener('change', paintLabel);
+  }
+  paintLabel();
+
+  /* ---- progress + fab ---- */
+  var bar = document.getElementById('progress');
+  var fab = document.getElementById('fab');
+  var toc = document.getElementById('oglavlenie');
+  function onScroll() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+    bar.style.width = p + '%';
+    var tocBottom = toc.getBoundingClientRect().bottom;
+    fab.classList.toggle('show', tocBottom < 0);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---- active section in side nav ---- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (l) { l.classList.remove('is-active'); });
+          map[e.target.id].classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-30% 0px -65% 0px' });
+    Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+  }
+
+  /* ---- tabs ---- */
+  document.querySelectorAll('[data-tabs]').forEach(function (box) {
+    var tabs = Array.prototype.slice.call(box.querySelectorAll('[role="tab"]'));
+    function select(tab, focus) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+      if (focus) tab.focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(t); });
+      t.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') { e.preventDefault(); select(tabs[(i + 1) % tabs.length], true); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); select(tabs[(i - 1 + tabs.length) % tabs.length], true); }
+      });
+    });
+  });
+
+  /* ---- homework checklist ---- */
+  var HW = 'dm-asp-m3-hw';
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('#hw input'));
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(HW) || '{}') || {}; } catch (e) { saved = {}; }
+  function count() {
+    var n = boxes.filter(function (b) { return b.checked; }).length;
+    document.getElementById('hwCount').textContent = 'Выполнено ' + n + ' из ' + boxes.length;
+  }
+  boxes.forEach(function (b) {
+    if (saved[b.dataset.hw]) b.checked = true;
+    b.addEventListener('change', function () {
+      saved[b.dataset.hw] = b.checked;
+      try { localStorage.setItem(HW, JSON.stringify(saved)); } catch (e) {}
+      count();
+    });
+  });
+  count();
+
+  /* ---- lightbox ---- */
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbScroll = document.getElementById('lbScroll');
+  var lastBtn = null;
+  function openLb(img, btn) {
+    lbImg.src = img.src; lbImg.alt = img.alt;
+    lb.classList.add('open'); document.body.style.overflow = 'hidden';
+    lastBtn = btn; lbScroll.scrollLeft = 0;
+    document.getElementById('lbClose').focus();
+  }
+  function closeLb() {
+    lb.classList.remove('open'); document.body.style.overflow = '';
+    if (lastBtn) lastBtn.focus();
+  }
+  document.querySelectorAll('[data-zoom]').forEach(function (btn) {
+    btn.addEventListener('click', function () { openLb(btn.querySelector('img'), btn); });
+  });
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  lb.addEventListener('click', function (e) { if (e.target === lb || e.target === lbScroll) closeLb(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && lb.classList.contains('open')) closeLb(); });
+})();
+</script>
+</body>
+</html>
